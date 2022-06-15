@@ -185,9 +185,6 @@ m_vector<T>& m_vector<T>::operator =( m_vector<T>& lst){
         throw MException("not memory:(");
     }
     copy(lst.data);
-    /*for(size_t i = 0; i < n; i++){
-        data[i] = lst[i];
-    }*/
     return *this;
 }
 
