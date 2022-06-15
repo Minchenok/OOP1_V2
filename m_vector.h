@@ -227,7 +227,7 @@ T& m_vector<T>::operator[](int index) {
 
 template <typename T>//перегрузка оператора [] const, переход к элементу массива по индексу
 T& m_vector<T>::operator[](int index) const{
-    return (*this)[index];
+    return get_elem(index);
 }
 
 template <typename T>
@@ -328,9 +328,6 @@ Iterator<T>::Iterator(m_vector<T> *container_obj, size_t n) : it{n}, container_o
 template<typename T>//
 Iterator<T> Iterator<T>::next(){//this
     ++(*this);
-    /*if(!this->is_end()){
-        it++;
-    }*/
     return *this;
 }
 
